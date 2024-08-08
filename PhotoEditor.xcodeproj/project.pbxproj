@@ -113,10 +113,7 @@
 		547452962C647597003E891A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				547452892C63AB34003E891A /* LoginView.swift */,
-				54FF8A332C64BAE0006E6ABF /* EmailPasswordView.swift */,
-				547452912C63D825003E891A /* ResetPasswordView.swift */,
-				5474528D2C63D23D003E891A /* RegisterView.swift */,
+				54FF8A372C64D6C7006E6ABF /* AuthView */,
 				547452872C63A559003E891A /* HomeView.swift */,
 			);
 			path = View;
@@ -138,6 +135,17 @@
 				547452832C63A4C4003E891A /* Authentication.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		54FF8A372C64D6C7006E6ABF /* AuthView */ = {
+			isa = PBXGroup;
+			children = (
+				547452892C63AB34003E891A /* LoginView.swift */,
+				54FF8A332C64BAE0006E6ABF /* EmailPasswordView.swift */,
+				547452912C63D825003E891A /* ResetPasswordView.swift */,
+				5474528D2C63D23D003E891A /* RegisterView.swift */,
+			);
+			path = AuthView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
