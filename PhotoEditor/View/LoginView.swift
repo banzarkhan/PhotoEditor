@@ -1,5 +1,5 @@
 //
-//  EmailLoginView.swift
+//  LoginView.swift
 //  PhotoEditor
 //
 //  Created by Ariuna Banzarkhanova on 07/08/24.
@@ -8,30 +8,21 @@
 import SwiftUI
 import FirebaseAuth
 
-struct EmailLoginView: View {
-    @StateObject var emailLoginVM = EmailLoginViewModel()
+struct LoginView: View {
+    @StateObject var emailLoginVM = LoginViewModel()
     
     @State var email = ""
     @State var password = ""
     
-    @State var isValidEmail = false
-    @State var isTypingFinished = false
-    
     @State var isRegisterOpened = false
     @State var isForgotPassword = false
+    @State var isFinishedTyping = false
     
     var body: some View {
         NavigationStack{
             VStack(alignment: .leading, spacing: 10) {
-                Text("Enter your email and password")
-                TextField("Email", text: $email, onCommit: {
-                    isValidEmail = emailLoginVM.isValidEmailAddress(email: email)
-                    isTypingFinished = true
-                    self.email = email
-                })
-                .textFieldStyle()
-                SecureField("Password", text: $password)
-                    .textFieldStyle()
+                EmailPasswordView(email: $email, password: $password, isFinishedTyping: $isFinishedTyping)
+                
                 Button("Forgot password?"){
                     isForgotPassword = true
                 }
@@ -42,12 +33,14 @@ struct EmailLoginView: View {
                             emailLoginVM.loginWithEmail(email: email, password: password)
                         }
                         .buttonStyle(.borderedProminent)
+                        .disabled(!isFinishedTyping)
                         
-                        Button("Sign in with Google"){
+                        Button("Sign in with Google") {
                             Task {
                                 await emailLoginVM.loginWithGoogle()
                             }
-                        }.buttonStyle(.bordered)
+                        } .buttonStyle(.bordered)
+                        
                         Button("Register") {
                             isRegisterOpened = true
                         }
@@ -67,5 +60,5 @@ struct EmailLoginView: View {
 }
 
 #Preview {
-    EmailLoginView()
+    LoginView()
 }

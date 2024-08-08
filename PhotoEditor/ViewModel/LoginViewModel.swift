@@ -1,5 +1,5 @@
 //
-//  EmailLoginViewModel.swift
+//  LoginViewModel.swift
 //  PhotoEditor
 //
 //  Created by Ariuna Banzarkhanova on 07/08/24.
@@ -8,7 +8,10 @@
 import Foundation
 import FirebaseAuth
 
-class EmailLoginViewModel: ObservableObject {
+class LoginViewModel: ObservableObject {
+    @Published var isEmailValid = false
+    @Published var isPasswordValid = false
+    
     
     func loginWithEmail(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
@@ -28,10 +31,5 @@ class EmailLoginViewModel: ObservableObject {
             print("An error occurred: \(error)")
         }
     }
-    
-    func isValidEmailAddress(email: String) -> Bool {
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        return emailPredicate.evaluate(with: email)
-    }
 }
+ 

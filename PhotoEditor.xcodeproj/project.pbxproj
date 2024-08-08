@@ -17,12 +17,14 @@
 		547452812C63A0C9003E891A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 547452802C63A0C9003E891A /* GoogleSignInSwift */; };
 		547452842C63A4C4003E891A /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547452832C63A4C4003E891A /* Authentication.swift */; };
 		547452882C63A559003E891A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547452872C63A559003E891A /* HomeView.swift */; };
-		5474528A2C63AB34003E891A /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547452892C63AB34003E891A /* EmailLoginView.swift */; };
-		5474528C2C63AB8F003E891A /* EmailLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474528B2C63AB8F003E891A /* EmailLoginViewModel.swift */; };
+		5474528A2C63AB34003E891A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547452892C63AB34003E891A /* LoginView.swift */; };
+		5474528C2C63AB8F003E891A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474528B2C63AB8F003E891A /* LoginViewModel.swift */; };
 		5474528E2C63D23D003E891A /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474528D2C63D23D003E891A /* RegisterView.swift */; };
 		547452902C63D3DB003E891A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474528F2C63D3DB003E891A /* RegisterViewModel.swift */; };
 		547452922C63D825003E891A /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547452912C63D825003E891A /* ResetPasswordView.swift */; };
 		547452952C6472C4003E891A /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547452942C6472C4003E891A /* TextFieldModifier.swift */; };
+		54FF8A342C64BAE0006E6ABF /* EmailPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF8A332C64BAE0006E6ABF /* EmailPasswordView.swift */; };
+		54FF8A362C64BD8D006E6ABF /* EmailPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF8A352C64BD8D006E6ABF /* EmailPasswordViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,12 +37,14 @@
 		547452822C63A0F2003E891A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		547452832C63A4C4003E891A /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		547452872C63A559003E891A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		547452892C63AB34003E891A /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
-		5474528B2C63AB8F003E891A /* EmailLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewModel.swift; sourceTree = "<group>"; };
+		547452892C63AB34003E891A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5474528B2C63AB8F003E891A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5474528D2C63D23D003E891A /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		5474528F2C63D3DB003E891A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		547452912C63D825003E891A /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		547452942C6472C4003E891A /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		54FF8A332C64BAE0006E6ABF /* EmailPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPasswordView.swift; sourceTree = "<group>"; };
+		54FF8A352C64BD8D006E6ABF /* EmailPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPasswordViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +113,8 @@
 		547452962C647597003E891A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				547452892C63AB34003E891A /* EmailLoginView.swift */,
+				547452892C63AB34003E891A /* LoginView.swift */,
+				54FF8A332C64BAE0006E6ABF /* EmailPasswordView.swift */,
 				547452912C63D825003E891A /* ResetPasswordView.swift */,
 				5474528D2C63D23D003E891A /* RegisterView.swift */,
 				547452872C63A559003E891A /* HomeView.swift */,
@@ -121,7 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				5474528F2C63D3DB003E891A /* RegisterViewModel.swift */,
-				5474528B2C63AB8F003E891A /* EmailLoginViewModel.swift */,
+				5474528B2C63AB8F003E891A /* LoginViewModel.swift */,
+				54FF8A352C64BD8D006E6ABF /* EmailPasswordViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -216,10 +222,12 @@
 			files = (
 				5474526C2C639C2F003E891A /* ContentView.swift in Sources */,
 				5474526A2C639C2F003E891A /* PhotoEditorApp.swift in Sources */,
-				5474528C2C63AB8F003E891A /* EmailLoginViewModel.swift in Sources */,
-				5474528A2C63AB34003E891A /* EmailLoginView.swift in Sources */,
+				5474528C2C63AB8F003E891A /* LoginViewModel.swift in Sources */,
+				5474528A2C63AB34003E891A /* LoginView.swift in Sources */,
 				5474528E2C63D23D003E891A /* RegisterView.swift in Sources */,
 				547452882C63A559003E891A /* HomeView.swift in Sources */,
+				54FF8A362C64BD8D006E6ABF /* EmailPasswordViewModel.swift in Sources */,
+				54FF8A342C64BAE0006E6ABF /* EmailPasswordView.swift in Sources */,
 				547452922C63D825003E891A /* ResetPasswordView.swift in Sources */,
 				547452902C63D3DB003E891A /* RegisterViewModel.swift in Sources */,
 				547452952C6472C4003E891A /* TextFieldModifier.swift in Sources */,

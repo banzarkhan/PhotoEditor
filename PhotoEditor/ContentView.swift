@@ -17,7 +17,7 @@ struct ContentView: View {
             if userLoggedIn {
                 HomeView()
             } else {
-                EmailLoginView()
+                LoginView()
             }
         }.onAppear {
             //Firebase state change listeneer

@@ -13,20 +13,18 @@ struct RegisterView: View {
     
     @State var email = ""
     @State var password = ""
+    @State var isFinishedTyping = false
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Enter your email and password")
-            TextField("Email", text: $email)
-                .textFieldStyle()
-            SecureField("Password", text: $password)
-                .textFieldStyle()
+            EmailPasswordView(email: $email, password: $password, isFinishedTyping: $isFinishedTyping)
             HStack {
                 Spacer()
                 Button("Register") {
                     registerVM.registerNewUser(email: email, password: password)
                 }
                 .buttonStyle(.borderedProminent)
+                .disabled(!isFinishedTyping)
                 Spacer()
             }
         }
