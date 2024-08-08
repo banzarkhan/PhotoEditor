@@ -13,7 +13,9 @@ import GoogleSignIn
 struct PhotoEditorApp: App {
     
     init() {
-        FirebaseApp.configure()
+        DispatchQueue.global(qos: .userInitiated).async {
+            FirebaseApp.configure()
+        }
     }
     
     var body: some Scene {

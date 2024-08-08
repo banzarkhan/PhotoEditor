@@ -23,6 +23,13 @@
 		547452902C63D3DB003E891A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474528F2C63D3DB003E891A /* RegisterViewModel.swift */; };
 		547452922C63D825003E891A /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547452912C63D825003E891A /* ResetPasswordView.swift */; };
 		547452952C6472C4003E891A /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547452942C6472C4003E891A /* TextFieldModifier.swift */; };
+		549FFB222C64FF470043B0D6 /* PhotoLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549FFB212C64FF470043B0D6 /* PhotoLibraryView.swift */; };
+		549FFB242C6506EE0043B0D6 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549FFB232C6506EE0043B0D6 /* CameraView.swift */; };
+		549FFB262C650C6C0043B0D6 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549FFB252C650C6C0043B0D6 /* LoadingState.swift */; };
+		549FFB282C6526480043B0D6 /* DrawingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549FFB272C6526480043B0D6 /* DrawingScreenView.swift */; };
+		549FFB2A2C65268E0043B0D6 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549FFB292C65268E0043B0D6 /* CanvasView.swift */; };
+		549FFB2C2C6527460043B0D6 /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549FFB2B2C6527460043B0D6 /* DrawingViewModel.swift */; };
+		549FFB2F2C6527EB0043B0D6 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549FFB2E2C6527EB0043B0D6 /* TextBox.swift */; };
 		54FF8A342C64BAE0006E6ABF /* EmailPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF8A332C64BAE0006E6ABF /* EmailPasswordView.swift */; };
 		54FF8A362C64BD8D006E6ABF /* EmailPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF8A352C64BD8D006E6ABF /* EmailPasswordViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +50,13 @@
 		5474528F2C63D3DB003E891A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		547452912C63D825003E891A /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		547452942C6472C4003E891A /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		549FFB212C64FF470043B0D6 /* PhotoLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryView.swift; sourceTree = "<group>"; };
+		549FFB232C6506EE0043B0D6 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		549FFB252C650C6C0043B0D6 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		549FFB272C6526480043B0D6 /* DrawingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingScreenView.swift; sourceTree = "<group>"; };
+		549FFB292C65268E0043B0D6 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		549FFB2B2C6527460043B0D6 /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
+		549FFB2E2C6527EB0043B0D6 /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
 		54FF8A332C64BAE0006E6ABF /* EmailPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPasswordView.swift; sourceTree = "<group>"; };
 		54FF8A352C64BD8D006E6ABF /* EmailPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPasswordViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,9 +94,11 @@
 		547452682C639C2F003E891A /* PhotoEditor */ = {
 			isa = PBXGroup;
 			children = (
+				549FFB2D2C6527D30043B0D6 /* Model */,
 				547452822C63A0F2003E891A /* Info.plist */,
 				547452692C639C2F003E891A /* PhotoEditorApp.swift */,
 				5474526B2C639C2F003E891A /* ContentView.swift */,
+				549FFB252C650C6C0043B0D6 /* LoadingState.swift */,
 				547452962C647597003E891A /* View */,
 				547452972C6476EE003E891A /* ViewModel */,
 				547452982C647741003E891A /* Firebase */,
@@ -115,6 +131,10 @@
 			children = (
 				54FF8A372C64D6C7006E6ABF /* AuthView */,
 				547452872C63A559003E891A /* HomeView.swift */,
+				549FFB212C64FF470043B0D6 /* PhotoLibraryView.swift */,
+				549FFB272C6526480043B0D6 /* DrawingScreenView.swift */,
+				549FFB292C65268E0043B0D6 /* CanvasView.swift */,
+				549FFB232C6506EE0043B0D6 /* CameraView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,6 +142,7 @@
 		547452972C6476EE003E891A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				549FFB2B2C6527460043B0D6 /* DrawingViewModel.swift */,
 				5474528F2C63D3DB003E891A /* RegisterViewModel.swift */,
 				5474528B2C63AB8F003E891A /* LoginViewModel.swift */,
 				54FF8A352C64BD8D006E6ABF /* EmailPasswordViewModel.swift */,
@@ -135,6 +156,14 @@
 				547452832C63A4C4003E891A /* Authentication.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		549FFB2D2C6527D30043B0D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				549FFB2E2C6527EB0043B0D6 /* TextBox.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		54FF8A372C64D6C7006E6ABF /* AuthView */ = {
@@ -233,13 +262,20 @@
 				5474528C2C63AB8F003E891A /* LoginViewModel.swift in Sources */,
 				5474528A2C63AB34003E891A /* LoginView.swift in Sources */,
 				5474528E2C63D23D003E891A /* RegisterView.swift in Sources */,
+				549FFB2C2C6527460043B0D6 /* DrawingViewModel.swift in Sources */,
 				547452882C63A559003E891A /* HomeView.swift in Sources */,
 				54FF8A362C64BD8D006E6ABF /* EmailPasswordViewModel.swift in Sources */,
 				54FF8A342C64BAE0006E6ABF /* EmailPasswordView.swift in Sources */,
 				547452922C63D825003E891A /* ResetPasswordView.swift in Sources */,
+				549FFB282C6526480043B0D6 /* DrawingScreenView.swift in Sources */,
+				549FFB222C64FF470043B0D6 /* PhotoLibraryView.swift in Sources */,
 				547452902C63D3DB003E891A /* RegisterViewModel.swift in Sources */,
 				547452952C6472C4003E891A /* TextFieldModifier.swift in Sources */,
+				549FFB2F2C6527EB0043B0D6 /* TextBox.swift in Sources */,
+				549FFB262C650C6C0043B0D6 /* LoadingState.swift in Sources */,
+				549FFB242C6506EE0043B0D6 /* CameraView.swift in Sources */,
 				547452842C63A4C4003E891A /* Authentication.swift in Sources */,
+				549FFB2A2C65268E0043B0D6 /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +413,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoEditor/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Application needs an access to the camera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Application needs an access to the Photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -407,6 +445,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoEditor/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Application needs an access to the camera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Application needs an access to the Photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

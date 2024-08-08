@@ -12,26 +12,43 @@ import FirebaseAuth
 struct ContentView: View {
     @State private var userLoggedIn = (Auth.auth().currentUser != nil)
     
+    @State var loadingState: LoadingState = .idle
+    
     var body: some View {
         VStack {
-            if userLoggedIn {
-                HomeView()
-            } else {
-                LoginView()
+            switch loadingState {
+            case .loading:
+                ProgressView()
+            case .loaded:
+                if userLoggedIn {
+                    PhotoLibraryView()
+//                    HomeView()
+                } else {
+                    LoginView()
+                }
+            case .idle:
+                Text("")
             }
         }.onAppear {
-            //Firebase state change listeneer
-            Auth.auth().addStateDidChangeListener { auth, user in
-                if (user != nil) {
-                    userLoggedIn = true
-                } else {
-                    userLoggedIn = false
-                }
-            }
+            loadAuthState()
         }
     }
 }
 
 #Preview {
     ContentView()
+}
+
+extension ContentView {
+    private func loadAuthState() {
+            loadingState = .loading
+            DispatchQueue.global(qos: .userInitiated).async {
+                Auth.auth().addStateDidChangeListener { auth, user in
+                    DispatchQueue.main.async {
+                        userLoggedIn = (user != nil)
+                        loadingState = .loaded
+                    }
+                }
+            }
+        }
 }
