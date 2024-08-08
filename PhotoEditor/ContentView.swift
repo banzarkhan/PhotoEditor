@@ -22,7 +22,6 @@ struct ContentView: View {
             case .loaded:
                 if userLoggedIn {
                     PhotoLibraryView()
-//                    HomeView()
                 } else {
                     LoginView()
                 }
