@@ -53,64 +53,6 @@ struct PhotoLibraryView: View {
                     }
                 }
                 .padding()
-                if model.addNewBox{
-                    
-                    Color.black.opacity(0.75)
-                        .ignoresSafeArea()
-                    
-                    // TextField...
-                    TextField("Type Here", text: $model.textBoxes[model.currentIndex].text)
-                        .font(.system(size: 35, weight: model.textBoxes[model.currentIndex].isBold ? .bold : .regular))
-                        .colorScheme(.dark)
-                        .foregroundColor(model.textBoxes[model.currentIndex].textColor)
-                        .padding()
-                    
-                    // add and cancel button...
-                    HStack{
-                        
-                        Button(action: {
-                            // toggling the isAdded...
-                            model.textBoxes[model.currentIndex].isAdded = true
-                            // closing the view...
-                            model.toolPicker.setVisible(true, forFirstResponder: model.canvas)
-                            model.canvas.becomeFirstResponder()
-                            withAnimation{
-                                model.addNewBox = false
-                            }
-                        }, label: {
-                            Text("Add")
-                                .fontWeight(.heavy)
-                                .foregroundColor(.black)
-                                .padding()
-                        })
-                        
-                        Spacer()
-                        
-                        Button(action: model.cancelTextView, label: {
-                            Text("Cancel")
-                                .fontWeight(.heavy)
-                                .foregroundColor(.black)
-                                .padding()
-                        })
-                    }
-                    .overlay(
-                        HStack(spacing: 15){
-                            
-                            // Color Picker...
-                            ColorPicker("", selection: $model.textBoxes[model.currentIndex].textColor)
-                                .labelsHidden()
-                            
-                            Button(action: {
-                                model.textBoxes[model.currentIndex].isBold.toggle()
-                            }, label: {
-                                Text(model.textBoxes[model.currentIndex].isBold ? "Normal" : "Bold")
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.black)
-                            })
-                        }
-                    )
-                    .frame(maxHeight: .infinity, alignment: .top)
-                }
             }
             .fullScreenCover(isPresented: $showCamera) {
                 CameraView(selectedImage: $image)
